@@ -1,2 +1,2 @@
-include *.txt README.md src/nextabsa/instructions.yaml
+include *.txt README.md instructions.yaml
 recursive-include requirements *.txt

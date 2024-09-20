@@ -1,27 +1,25 @@
-import copy
-import random
 from dataclasses import dataclass, field
-from typing import Callable, Dict, Sequence, Any
+from typing import Dict, Sequence, Any
+from tqdm import tqdm
 
 import torch
 from torch.utils.data import Dataset
-from tqdm import tqdm
-
-
-IGNORE_INDEX = -100
 
 
 def _tokenize_fn(strings: Sequence[str], tokenizer: Any, max_length: int) -> Dict:
     """Tokenize a list of strings."""
-    tokenized_list = [
-        tokenizer(
+
+    tokenized_list = []
+    for text in tqdm(strings, "tokenize"):
+        tokenized = tokenizer(
             text,
             return_tensors="pt",
             padding="longest",
             max_length=max_length,
             truncation=True,
-        ) for text in strings
-    ]
+        )
+        tokenized_list.append(tokenized)
+
     input_ids = labels = [tokenized.input_ids[0] for tokenized in tokenized_list]
     input_ids_lens = labels_lens = [
         tokenized.input_ids.ne(tokenizer.pad_token_id).sum().item() for tokenized in tokenized_list
@@ -38,16 +36,14 @@ def preprocess(
     sources: Sequence[str],
     targets: Sequence[str],
     tokenizer: Any,
-    max_length: int,
+    source_max_length: int,
+    target_max_length: int,
 ) -> Dict:
     """Preprocess the data by tokenizing."""
-    examples = [s + t for s, t in zip(sources, targets)]
-    examples_tokenized, sources_tokenized = [_tokenize_fn(strings, tokenizer, max_length) for strings in (examples, sources)]
-    input_ids = examples_tokenized["input_ids"]
-    labels = copy.deepcopy(input_ids)
-    for label, source_len in zip(labels, sources_tokenized["input_ids_lens"]):
-        label[:source_len] = IGNORE_INDEX
-    return dict(input_ids=input_ids, labels=labels)
+    
+    sources_tokenized = _tokenize_fn(sources, tokenizer, source_max_length)
+    targets_tokenized = _tokenize_fn(targets, tokenizer, target_max_length)
+    return dict(input_ids=sources_tokenized["input_ids"], labels=targets_tokenized["input_ids"])
 
 
 class AbsaDataset(Dataset):
@@ -55,17 +51,26 @@ class AbsaDataset(Dataset):
     def __init__(self,
                  data: Sequence[Dict],
                  tokenizer: Any,
-                 max_length: int = 512,
+                 bos_instruction: str,
+                 eos_instruction: str,
+                 source_max_length: int = 512,
+                 target_max_length: int = 64,
                  verbose: bool = False
                  ):
         super().__init__()
 
-        self.tokenizer = tokenizer
-        print("Tokenizing inputs... this may take some time...")
-        # TODO: preprocess data
+        self.tokenizer = tokenizer    
+        sources = [bos_instruction.format_map(example) for example in data]
+        targets = [eos_instruction.format_map(example) for example in data]
 
-        self.input_ids = None
-        self.labels = None
+        if verbose:
+            print((sources[0]))
+            print((targets[0]))
+
+        data_dict = preprocess(sources, targets, tokenizer, source_max_length, target_max_length)
+
+        self.input_ids = data_dict["input_ids"]
+        self.labels = data_dict["labels"]
 
 
     def __len__(self):

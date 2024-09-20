@@ -6,9 +6,10 @@ name = "pypi"
 [packages]
 numpy = "*"
 tqdm = "*"
-torch = "*"
+torch = ">1.8"
 transformers = "*"
 datasets = "*"
+sentencepiece = "*"
 
 [dev-packages]
 ipykernel = "*"
