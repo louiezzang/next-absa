@@ -1,0 +1,2 @@
+include *.txt README.md src/nextabsa/instructions.yaml
+recursive-include requirements *.txt
