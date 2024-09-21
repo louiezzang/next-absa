@@ -12,9 +12,9 @@ ATE:
     input: I even got my teenage son one, because of the features that it offers, like, iChat, Photobooth, garage band and more!.
     output: features, iChat, Photobooth, garage band
     Now complete the following example-
-    input: {input}
+    input:
   delim_instruct: 
-  eos_instruct: " \noutput: {output}"
+  eos_instruct: " \noutput:"
 
 # ===================================================
 # ATSC (Aspect Term Sentiment Classification)
@@ -30,9 +30,9 @@ ATSC:
     input: I even got my teenage son one, because of the features that it offers, like, iChat, Photobooth, garage band and more!. The aspect is garage band.
     output: positive
     Now complete the following example-
-    input: {input}
+    input:
   delim_instruct: " The aspect is "
-  eos_instruct: ".\noutput: {output}"
+  eos_instruct: ".\noutput:"
 
 # ===================================================
 # ASPE (Aspect Sentiment Pair Extraction)
@@ -47,9 +47,9 @@ ASPE:
     input: I even got my teenage son one, because of the features that it offers, like, iChat, Photobooth, garage band and more!.
     output: features:positive, iChat:positive, Photobooth:positive, garage band:positive
     Now complete the following example-
-    input: {input}
+    input:
   delim_instruct:
-  eos_instruct: " \noutput: {output}"
+  eos_instruct: " \noutput:"
 
 # ===================================================
 # AOOE (Aspect Opinion Extraction)
@@ -64,9 +64,9 @@ AOOE:
     input: it is of high quality , has a killer GUI , is extremely stable , is highly expandable , is bundled with lots of very good applications , is easy to use , and is absolutely gorgeous. The aspect is GUI.
     output: killer
     Now complete the following example-
-    input: {input}
+    input:
   delim_instruct: " The aspect is "
-  eos_instruct: ".\noutput: {output}"
+  eos_instruct: ".\noutput:"
 
 # ===================================================
 # AOPE (Aspect Opinion Pair Extraction)
@@ -81,9 +81,9 @@ AOPE:
     input: it is of high quality , has a killer GUI , is extremely stable , is highly expandable , is bundled with lots of very good applications , is easy to use , and is absolutely gorgeous.
     output: quality:high, GUI:killer, applications:good, use:easy 
     Now complete the following example-
-    input: {input}
+    input:
   delim_instruct:
-  eos_instruct: " \noutput: {output}"
+  eos_instruct: " \noutput: "
 
 # ===================================================
 # AOSTE (or ASTE: Aspect Opinion Sentiment Triplet Extraction)
@@ -98,9 +98,9 @@ AOSTE:
     input: it is of high quality , has a killer GUI , is extremely stable , is highly expandable , is bundled with lots of very good applications , is easy to use , and is absolutely gorgeous.
     output: quality:high:positive, GUI:killer:positive, applications:good:positive, use:easy:positive 
     Now complete the following example-
-    input: {input}
+    input:
   delim_instruct:
-  eos_instruct: " \noutput: {output}"
+  eos_instruct: " \noutput:"
 
 
 

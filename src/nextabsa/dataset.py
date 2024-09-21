@@ -50,8 +50,8 @@ class AbsaDataset(Dataset):
     def __init__(self,
                  data: Sequence[Dict],
                  tokenizer: Any,
-                 bos_instruction: str,
-                 eos_instruction: str,
+                 source_col: str,
+                 target_col: str,
                  source_max_length: int = 512,
                  target_max_length: int = 64,
                  verbose: bool = False
@@ -59,8 +59,8 @@ class AbsaDataset(Dataset):
         super().__init__()
 
         self.tokenizer = tokenizer    
-        sources = [bos_instruction.format_map(example) for example in data]
-        targets = [eos_instruction.format_map(example) for example in data]
+        sources = [example[source_col] for example in data]
+        targets = [example[target_col] for example in data]
 
         if verbose:
             print((sources[0]))
