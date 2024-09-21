@@ -4,3 +4,4 @@ torch>1.8
 transformers
 datasets
 sentencepiece
+accelerate>=0.21.0
