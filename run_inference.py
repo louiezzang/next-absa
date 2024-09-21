@@ -24,12 +24,11 @@ if __name__ == "__main__":
     test_dataset = AbsaDataset(
         data=test_data,
         tokenizer=tokenizer,
-        source_col=instructions["text"],
-        target_col=instructions["labels"],
+        source_col="text",
         source_max_length=512,
-        target_max_length=64,
+        train=False,
         verbose=True)
     
-    preds = generator.generate(test_dataset)
-    for pred in preds:
-        print(pred)
+    preds = generator.generate(test_dataset, batch_size=4, max_length=128)
+    for input, pred in zip(test_data, preds):
+        print("\n", input["raw_words"], " ==> ", pred)
