@@ -12,6 +12,15 @@ To activate this project's virtualenv
 $ pipenv shell
 ```
 
+## Installation
+
+```sh
+$ git clone https://github.com/louiezzang/next-absa.git
+$ cd next-absa/
+$ pip install .
+$ cd ../
+```
+
 
 ## References
 * https://www.reddit.com/r/MachineLearning/comments/vh9gni/d_how_to_best_extract_product_benefitsproblems/
