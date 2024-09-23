@@ -32,6 +32,9 @@ $ cd ../
 * https://arxiv.org/pdf/2302.08624
 * https://aclanthology.org/2021.acl-short.64.pdf
 * https://github.com/IsakZhang/Generative-ABSA
+* https://paperswithcode.com/dataset/fabsa
+* https://www.researchgate.net/publication/364171087_Aspect_Detection_in_Sportswear_Apparel_Reviews_for_Opinion_Mining
+* https://www.kaggle.com/datasets/jocelyndumlao/consumer-review-of-clothing-product
 
 
 

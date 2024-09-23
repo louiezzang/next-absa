@@ -25,7 +25,7 @@ def create_data_in_aoste_format(data, instruction, term_key, polarity_key, text_
 
         labels = []
         for aspect, opinion in zip(example[aspect_col], example[opinion_col]):
-            label = f"{" ".join(aspect[term_key])}:{" ".join(opinion[term_key])}:{label_map[aspect[polarity_key]]}"
+            label = f"{' '.join(aspect[term_key])}:{' '.join(opinion[term_key])}:{label_map[aspect[polarity_key]]}"
             labels.append(label)
         example["labels"] = ", ".join(labels)
 
