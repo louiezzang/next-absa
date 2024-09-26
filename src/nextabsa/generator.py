@@ -92,5 +92,5 @@ class AbsaGenerator:
 
         p = tp/total_pred
         r = tp/total_gt
-        return p, r, 2*p*r/(p+r), None
+        return p, r, 2*p*r/(p+r)
     
