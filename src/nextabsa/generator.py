@@ -38,3 +38,59 @@ class AbsaGenerator:
             for output_text in output_texts:
                 predicted_output.append(output_text)
         return predicted_output
+
+    def get_metrics(self, y_true, y_pred, is_triplet_extraction=False):
+        total_pred = 0
+        total_gt = 0
+        tp = 0
+        if not is_triplet_extraction:
+            for gt, pred in zip(y_true, y_pred):
+                gt_list = gt.split(", ")
+                pred_list = pred.split(", ")
+                total_pred+=len(pred_list)
+                total_gt+=len(gt_list)
+                for gt_val in gt_list:
+                    for pred_val in pred_list:
+                        if pred_val in gt_val or gt_val in pred_val:
+                            tp+=1
+                            break
+
+        else:
+            for gt, pred in zip(y_true, y_pred):
+                gt_list = gt.split(", ")
+                pred_list = pred.split(", ")
+                total_pred+=len(pred_list)
+                total_gt+=len(gt_list)
+                for gt_val in gt_list:
+                    gt_asp = gt_val.split(":")[0]
+
+                    try:
+                        gt_op = gt_val.split(":")[1]
+                    except:
+                        continue
+
+                    try:
+                        gt_sent = gt_val.split(":")[2]
+                    except:
+                        continue
+
+                    for pred_val in pred_list:
+                        pr_asp = pred_val.split(":")[0]
+
+                        try:
+                            pr_op = pred_val.split(":")[1]
+                        except:
+                            continue
+
+                        try:
+                            pr_sent = gt_val.split(":")[2]
+                        except:
+                            continue
+
+                        if pr_asp in gt_asp and pr_op in gt_op and gt_sent == pr_sent:
+                            tp+=1
+
+        p = tp/total_pred
+        r = tp/total_gt
+        return p, r, 2*p*r/(p+r), None
+    
