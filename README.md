@@ -28,13 +28,13 @@ $ cd ../
 * https://github.com/abrazinskas/SelSum
 * https://paperswithcode.com/task/aspect-extraction
 * https://paperswithcode.com/paper/instructabsa-instruction-learning-for-aspect
-* https://github.com/kevinscaria/instructabsa
-* https://arxiv.org/pdf/2302.08624
-* https://aclanthology.org/2021.acl-short.64.pdf
-* https://github.com/IsakZhang/Generative-ABSA
+* 🔥[InstructABSA: Instruction Learning for Aspect Based Sentiment Analysis, K Scaria, 2023](https://arxiv.org/abs/2201.11903)
+    - Code: https://github.com/kevinscaria/instructabsa
+* [Towards Generative Aspect-Based Sentiment Analysis, W Zhang, 2021](https://aclanthology.org/2021.acl-short.64.pdf)
+    - Code: https://github.com/IsakZhang/Generative-ABSA
 * https://paperswithcode.com/dataset/fabsa
 * https://www.researchgate.net/publication/364171087_Aspect_Detection_in_Sportswear_Apparel_Reviews_for_Opinion_Mining
 * https://www.kaggle.com/datasets/jocelyndumlao/consumer-review-of-clothing-product
-
+* 🔥[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, J Wei, 2022](https://arxiv.org/abs/2201.11903)
 
 
