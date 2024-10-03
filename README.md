@@ -36,5 +36,6 @@ $ cd ../
 * https://www.researchgate.net/publication/364171087_Aspect_Detection_in_Sportswear_Apparel_Reviews_for_Opinion_Mining
 * https://www.kaggle.com/datasets/jocelyndumlao/consumer-review-of-clothing-product
 * 🔥[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, J Wei, 2022](https://arxiv.org/abs/2201.11903)
+* [A Survey on Aspect-Based Sentiment Analysis, W Zhang, 2022](https://arxiv.org/pdf/2203.01054)
 
 
