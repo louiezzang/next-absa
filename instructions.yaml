@@ -111,11 +111,11 @@ ASQP:
   bos_instruct: |
     Definition: The output will be the aspects (both implicit and explicit) the corresponding opinion/describing terms and the sentiment polarity (positive, negative, neutral) of the opinion term . In cases where there are no aspects the output should be noaspectterm:none:none.
     Positive example 1-
-    input: I charge it at night and skip taking the cord with me because of the good battery life.
-    output: battery life:good:positive 
+    input: Food is excellent.
+    output: food quality:food:excellent:positive 
     Positive example 2-
-    input: it is of high quality , has a killer GUI , is extremely stable , is highly expandable , is bundled with lots of very good applications , is easy to use , and is absolutely gorgeous.
-    output: quality:high:positive, GUI:killer:positive, applications:good:positive, use:easy:positive 
+    input: Drinks way over priced and The sushi was awful!
+    output: drinks prices:Drinks:over priced:negative, food quality:sushi:awful:negative
     Now complete the following example-
     input:
   delim_instruct:

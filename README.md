@@ -37,5 +37,6 @@ $ cd ../
 * https://www.kaggle.com/datasets/jocelyndumlao/consumer-review-of-clothing-product
 * 🔥[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, J Wei, 2022](https://arxiv.org/abs/2201.11903)
 * [A Survey on Aspect-Based Sentiment Analysis, W Zhang, 2022](https://arxiv.org/pdf/2203.01054)
+* https://github.com/IsakZhang/ABSA-QUAD
 
 
