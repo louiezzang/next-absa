@@ -38,5 +38,6 @@ $ cd ../
 * 🔥[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, J Wei, 2022](https://arxiv.org/abs/2201.11903)
 * [A Survey on Aspect-Based Sentiment Analysis, W Zhang, 2022](https://arxiv.org/pdf/2203.01054)
 * https://github.com/IsakZhang/ABSA-QUAD
-
+* [Building an AI-Powered Customer Review Summarization](https://medium.com/@genuine.opinion/building-an-ai-powered-customer-review-summarization-app-a-step-by-step-guide-with-langchain-and-0264a4c8071b)
+    - https://github.com/ShahMitul-GenAI/ReviewEngine
 
