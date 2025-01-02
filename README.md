@@ -23,6 +23,7 @@ $ cd ../
 
 
 ## References
+### ABSA
 * https://www.reddit.com/r/MachineLearning/comments/vh9gni/d_how_to_best_extract_product_benefitsproblems/
 * https://github.com/yangheng95/PyABSA
 * https://github.com/abrazinskas/SelSum
@@ -38,6 +39,15 @@ $ cd ../
 * 🔥[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, J Wei, 2022](https://arxiv.org/abs/2201.11903)
 * [A Survey on Aspect-Based Sentiment Analysis, W Zhang, 2022](https://arxiv.org/pdf/2203.01054)
 * https://github.com/IsakZhang/ABSA-QUAD
-* [Building an AI-Powered Customer Review Summarization](https://medium.com/@genuine.opinion/building-an-ai-powered-customer-review-summarization-app-a-step-by-step-guide-with-langchain-and-0264a4c8071b)
+
+### Document Summarization
+* [Building an AI-Powered Customer Review Summarization App](https://medium.com/@genuine.opinion/building-an-ai-powered-customer-review-summarization-app-a-step-by-step-guide-with-langchain-and-0264a4c8071b)
     - https://github.com/ShahMitul-GenAI/ReviewEngine
+    - https://www.linkedin.com/pulse/building-ai-powered-customer-review-summarization-app-mitul-shah-83woe
+* [Databricks - Automating Product Review Summarization With LLMs](https://github.com/databricks-industry-solutions/review-summarisation)
+* [Databricks - Automated Analysis of Product Reviews Using Large Language Models (LLMs)](https://www.databricks.com/blog/automated-analysis-product-reviews-using-large-language-models-llms)
+* https://github.com/me-tusharchandra/Fine-Tuning-LLM-Review-Summarization
+* https://www.crossml.com/guide-to-llm-text-summarization/
+* https://github.com/sahilichake/Document-Summarization-App-using-LLM
+* https://discuss.huggingface.co/t/summarization-on-long-documents/920/3
 

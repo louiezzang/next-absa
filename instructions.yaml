@@ -120,3 +120,22 @@ ASQP:
     input:
   delim_instruct:
   eos_instruct: " \noutput:"
+
+# ===================================================
+# SASTE
+# Summarization from ASTE list
+# ===================================================
+SASTE:
+  bos_instruct: |
+    Definition: The output will be the summarized sentences from the aspect and its opinion terms .
+    Positive example 1-
+    input: fit:perfect, quality:great, color:beautiful
+    output: Guests love because of the perfect fit, great quality and beautiful colors.
+    Negative example 2-
+    input: fabric:thin, fabric:changed, seam:scratchy, seam:ripped
+    output: Guests don't like because fabric is thin, changed and seams are scratchy and ripped, 
+    Now complete the following example-
+    input:
+  delim_instruct:
+  eos_instruct: " \noutput:"
+  
