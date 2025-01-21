@@ -45,8 +45,8 @@ class AbsaGenerator:
         tp = 0
         if not is_triplet_extraction:
             for gt, pred in zip(y_true, y_pred):
-                gt_list = gt.split(", ")
-                pred_list = pred.split(", ")
+                gt_list = list(set(gt.split(", ")))
+                pred_list = list(set(pred.split(", ")))
                 total_pred += len(pred_list)
                 total_gt += len(gt_list)
                 for gt_val in gt_list:
@@ -57,8 +57,8 @@ class AbsaGenerator:
 
         else:
             for gt, pred in zip(y_true, y_pred):
-                gt_list = gt.split(", ")
-                pred_list = pred.split(", ")
+                gt_list = list(set(gt.split(", ")))
+                pred_list = list(set(pred.split(", ")))
                 total_pred += len(pred_list)
                 total_gt += len(gt_list)
                 for gt_val in gt_list:
@@ -83,7 +83,7 @@ class AbsaGenerator:
                             continue
 
                         try:
-                            pr_sent = gt_val.split(":")[2]
+                            pr_sent = pred_val.split(":")[2]
                         except:
                             continue
 
