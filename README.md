@@ -40,9 +40,15 @@ $ cd ../
 * [A Survey on Aspect-Based Sentiment Analysis, W Zhang, 2022](https://arxiv.org/pdf/2203.01054)
 * https://github.com/IsakZhang/ABSA-QUAD
 * Sentence vs. Review level
-    * [ROAST: Review-level Opinion Aspect Sentiment Target Joint Detection for
+    - [ROAST: Review-level Opinion Aspect Sentiment Target Joint Detection for
 ABSA](https://arxiv.org/pdf/2405.20274)
-    * [3.5 Sentence-Level to Review-Level ABSA](https://aclanthology.org/2023.ijcnlp-main.41.pdf)
+    - [3.5 Sentence-Level to Review-Level ABSA](https://aclanthology.org/2023.ijcnlp-main.41.pdf)
+* Aspect Sentiment Quad Prediction as Paraphrase Generation
+    - Paper: https://aclanthology.org/2021.emnlp-main.726.pdf
+    - Code: https://github.com/IsakZhang/ABSA-QUAD
+* Self-Consistent Reasoning-based Aspect-Sentiment Quad Prediction with Extract-Then-Assign Strategy
+    - Paper: https://arxiv.org/abs/2403.00354
+    - Code: https://github.com/jieyong99/SCRAP
 
 ### Document Summarization
 * [Building an AI-Powered Customer Review Summarization App](https://medium.com/@genuine.opinion/building-an-ai-powered-customer-review-summarization-app-a-step-by-step-guide-with-langchain-and-0264a4c8071b)
