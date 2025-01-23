@@ -102,7 +102,7 @@ AOSTE:
     input:
   delim_instruct:
   eos_instruct: " \noutput:"
-
+  
 # ===================================================
 # AOSQE (or ASQP: Aspect Opinion Sentiment Quad Prediction)
 # (aspect category, aspect term, opinion term, sentiment polarity)
@@ -122,8 +122,13 @@ ASQP:
   eos_instruct: " \noutput:"
 
 # ===================================================
-# SASTE
-# Summarization from ASTE list
+# TODO:
+# SASQP
+# Summarization from ASQP list
+# Eg. Pc(c) is Pp(p) because Pa(a) is Po(o).
+#   Input: The pasta yesterday was delicious!
+#   LabelL: (c, a, o, p): (food quality, pasta, delicious, POS)
+#   Target: Food quality is great because pasta is delicious
 # ===================================================
 SASTE:
   bos_instruct: |
